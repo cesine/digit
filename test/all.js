@@ -1,5 +1,6 @@
 require("montage-testing").run(require,[
     // Please keep in alphabetical order
+    "test/audio/audio-spec",
     "test/button/button-spec",
     "test/checkbox/checkbox-spec",
     "test/list/list-spec",
@@ -9,5 +10,6 @@ require("montage-testing").run(require,[
     "test/slider/slider-spec",
     "test/text-field/text-field-spec",
     "test/text-area/text-area-spec",
-    "test/toggle-switch/toggle-switch-spec"
+    "test/toggle-switch/toggle-switch-spec",
+    "test/video/video-spec"
 ]);
