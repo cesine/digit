@@ -1,27 +1,27 @@
 var Montage = require("montage").Montage;
 var TestPageLoader = require("montage-testing/testpageloader").TestPageLoader;
 
-TestPageLoader.queueTest("video-test", function(testPage) {
+TestPageLoader.queueTest("audio-test", function(testPage) {
 
-    describe("test/video/video-spec", function() {
+    describe("test/audio/audio-spec", function() {
         it("should load", function() {
             expect(testPage.loaded).toBe(true);
         });
 
-        describe("Video", function() {
+        describe("Audio", function() {
             describe("default", function () {
                 it("can be created", function() {
-                    expect(testPage.test.video).toBeDefined();
+                    expect(testPage.test.audio).toBeDefined();
                 });
-                var video;
+                var audio;
                 beforeEach(function() {
-                    if (!video) {
-                        video = testPage.test.video;
+                    if (!audio) {
+                        audio = testPage.test.audio;
                         //keep default values
-                        //defaultChecked = video.checked;
+                        //defaultChecked = audio.checked;
                     }
                     //restore default values
-                    //video.checked = defaultChecked;
+                    //audio.checked = defaultChecked;
                 });
             });
         });

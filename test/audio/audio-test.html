@@ -2,23 +2,23 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Video</title>
+    <title>Audio</title>
     <script type="text/javascript" src="../../node_modules/montage/montage.js" data-package="../../"></script>
     <script type="text/montage-serialization">
         {
             "test": {
-                "prototype": "test/video/video-test[Test]",
+                "prototype": "test/audio/audio-test[Test]",
                 "properties": {
-                    "video": {"@": "video"}
+                    "audio": {"@": "audio"}
                 }
             },
 
-            "video": {
-                "prototype": "ui/video.reel",
+            "audio": {
+                "prototype": "ui/audio.reel",
                 "properties": {
-                    "element": {"#": "video"},
-                    "src": "../../ui/video.reel/video.mov",
-                    "posterSrc": "../../ui/video.reel/poster.png"
+                    "element": {"#": "audio"},
+                    "src": "../../ui/audio.reel/audio.mov",
+                    "posterSrc": "../../ui/audio.reel/poster.png"
                 }
             }
         }
@@ -26,8 +26,8 @@
 
 </head>
 <body>
-    <h1>Video</h1>
+    <h1>Audio</h1>
 
-    <div data-montage-id="video"></div>
+    <div data-montage-id="audio"></div>
 </body>
 </html>
