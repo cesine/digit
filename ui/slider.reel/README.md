@@ -1,29 +1,32 @@
-# Range Input
+# Slider
 
-![Range Input](https://raw.github.com/montagejs/montage-lab/master/skeleton/mobile/components/input-range.reel/screenshot.png)
+![Slider](screenshot.png)
 
-The Range Input component wraps an HTML `<input type="range">` element.
+The Slider component wraps an HTML `<input type="range">` element.
 
 ## How to use
 
-```html
-<input data-montage-id="range" type="range">
-```
-
 ```json
-"range": {
-    "prototype": "matte/ui/input-range.reel",
+"slider": {
+    "prototype": "digit/ui/slider.reel",
     "properties": {
-        "element": {"#": "range"}
+        "element": {"#": "slider"}
     }
 }
+```
+
+```html
+<input data-montage-id="slider" type="range">
 ```
 
 
 ## Available properties
 
-* `max` - Maximal value.
-* `value` - Current value of the Range Input.
+* `"min": 10` - Minimal value.
+* `"max": 50` - Maximal value.
+* `"value": 20` - Current value of the Slider.
+* `"step": 5` - Sets the increment value.
+* `"axis": "vertical"` - Changes the axis to vertical.
 
 
 
@@ -31,7 +34,6 @@ The Range Input component wraps an HTML `<input type="range">` element.
 
 * `.digit-Slider` - The track of the Slider element
 * `.digit-Slider-thumb` - The thumb of the Slider element
-* `.digit-Slider-thumbTrack` - The element which bounds the motion of the thumb, If the width of the thumb is changed the right property should be adjusted.
 
 ```css
 .digit-Slider {
@@ -41,12 +43,3 @@ The Range Input component wraps an HTML `<input type="range">` element.
     background-color: pink;
 }
 ```
-
-
-
-## Browser support
-
-* Chrome (latest)
-* Safari 5+
-* Firefox 4+
-* Opera (latest)

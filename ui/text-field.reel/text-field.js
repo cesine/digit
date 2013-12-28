@@ -1,5 +1,4 @@
-var Montage = require("montage").Montage,
-    AbstractTextField = require("montage/ui/base/abstract-text-field").AbstractTextField;
+var AbstractTextField = require("montage/ui/base/abstract-text-field").AbstractTextField;
 
 exports.TextField = AbstractTextField.specialize({
 
@@ -10,8 +9,6 @@ exports.TextField = AbstractTextField.specialize({
     constructor: {
         value: function TextField() {
             this.super();
-
-            this.classList.add("digit-TextField");
         }
     }
 });
