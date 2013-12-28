@@ -9,26 +9,44 @@
         {
             "owner": {
                 "properties": {
-                    "element": {"#": "audio"}
+                    "element": {"#": "audio"},
+                    "mediaElement": {"#": "mediaElement"}
                 }
-        
+            },
+            "control": {
+                "prototype": "ui/audio-control.reel",
+                "properties": {
+                    "element": {"#": "control"},
+                    "audio": {"@": "owner"}
+                },
+                "bindings": {
+                    "audioController": {"<-": "@owner.audioController"}
+                }
+            },
+            "play": {
+                "prototype": "ui/button.reel",
+                "properties": {
+                    "element": {"#": "play"}
+                },
+                "listeners": [
+                    {
+                        "type": "action",
+                        "listener": {"@": "owner"}
+                    }
+                ]
             }
         }
     </script>
 </head>
 <body>
 
-    <div data-montage-id="audio" class="digit-Audio">
-        <audio class="digit-Audio-file" src="../audio.reel/audio.mp3"></audio>
-        <menu class="digit-Audio-controls">
-            <div class="digit-Audio-controls-poster"></div>
-            <button class="digit-Audio-controls-button-play"></button>
-            <div class="digit-Audio-controls-track">
-                <div class="digit-Audio-controls-track-timeline">
-                    <div class="digit-Audio-controls-track-timeline-progress"></div>
-                </div>
-                <div draggable="true" class="digit-Audio-controls-track-thumb">-2:45</div>
-            </div>
+    <div data-montage-id="audio" class="digit-Audio digit-Audio--firstPlay">
+        <audio data-montage-id="mediaElement" class="digit-Audio-frame">
+        </audio>
+        <div class="digit-Audio-cover">
+            <button data-montage-id="play" class="digit-Audio-cover-button"></button>
+        </div>
+        <menu data-montage-id="control">
         </menu>
     </div>
 
