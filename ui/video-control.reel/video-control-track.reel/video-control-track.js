@@ -12,7 +12,7 @@ var Promise = require("montage/core/promise").Promise;
     @class VideoControlTrack
     @extends Component
 */
-exports.VideoControlTrack = Montage.create(AbstractSlider, /** @lends VideoControlTrack# */ {
+exports.VideoControlTrack = AbstractSlider.specialize(/** @lends VideoControlTrack# */ {
 
     // Lifecycle
 

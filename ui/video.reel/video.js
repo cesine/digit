@@ -1,10 +1,19 @@
+/**
+    @module "ui/video.reel"
+*/
 var Montage = require("montage/core/core").Montage;
 var Component = require("montage/ui/component").Component;
 var PressComposer = require("montage/composer/press-composer").PressComposer;
 var MediaController = require("montage/core/media-controller").MediaController;
 var AbstractVideo = require("montage/ui/base/abstract-video").AbstractVideo;
 
-exports.Video = Montage.create(AbstractVideo, {
+
+/**
+    Description TODO
+    @class module:"ui/video.reel".Video
+    @extends module:montage/ui/component.Component
+*/
+exports.Video = AbstractVideo.specialize(/** @lends module:"ui/video.reel".Video# */ {
 
     // Lifecycle
 

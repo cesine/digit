@@ -12,7 +12,7 @@ var AbstractButton = require("montage/ui/base/abstract-button").AbstractButton;
     @class module:"ui/video-control.reel".VideoControl
     @extends module:montage/ui/component.Component
 */
-exports.VideoControl = Montage.create(Component, /** @lends module:"ui/video-control.reel".VideoControl# */ {
+exports.VideoControl = Component.specialize(/** @lends module:"ui/video-control.reel".VideoControl# */ {
 
     // Lifecycle
 
