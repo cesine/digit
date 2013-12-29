@@ -20,7 +20,7 @@
     height: 100%;
 }
 
-/* Frame (the actual video) ------------------------------------ */
+/* Frame (the audio visualization area) ------------------------------------ */
 
 .digit-Audio-frame {
     display: block;

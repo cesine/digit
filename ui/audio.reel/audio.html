@@ -17,12 +17,26 @@
                 "prototype": "ui/video-control.reel",
                 "properties": {
                     "element": {"#": "control"},
-                    "audio": {"@": "owner"}
+                    "audio": {"@": "owner"},
+                    "video": {"@": "owner"}
                 },
                 "bindings": {
-                    "audioController": {"<-": "@owner.audioController"}
+                    "audioController": {"<-": "@owner.audioController"},
+                    "videoController": {"<-": "@owner.audioController"}
                 }
             },
+
+            "image": {
+                "prototype": "ui/image.reel",
+                "properties": {
+                    "element": {"#": "image"},
+                    "src": ""
+                },
+                "bindings": {
+                    "src": {"<-": "@owner.posterSrc"}
+                }
+            },
+
             "play": {
                 "prototype": "ui/button.reel",
                 "properties": {
@@ -41,12 +55,13 @@
 <body>
 
     <div data-montage-id="audio" class="digit-Audio digit-Audio--firstPlay">
+        <img data-montage-id="image" />
         <audio data-montage-id="mediaElement" class="digit-Audio-frame">
         </audio>
         <div class="digit-Audio-cover">
             <button data-montage-id="play" class="digit-Audio-cover-button"></button>
         </div>
-        <menu data-montage-id="control">
+        <menu data-montage-id="control" class="digit-AudioControl">
         </menu>
     </div>
 
