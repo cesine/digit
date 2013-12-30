@@ -1,6 +1,7 @@
 require("montage-testing").run(require,[
     // Please keep in alphabetical order
     "test/audio/audio-spec",
+    "test/big-list/big-list-spec",
     "test/button/button-spec",
     "test/checkbox/checkbox-spec",
     "test/list/list-spec",
