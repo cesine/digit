@@ -22,17 +22,14 @@ exports.Video = AbstractVideo.specialize(/** @lends module:"ui/video.reel".Video
      */
     constructor: {
         value: function Video() {
-            AbstractVideo.constructor.call(this); // super
+            this.super();
             this.addPathChangeListener("videoController.status", this, "handleControllerStatusChange");
         }
     },
 
     enterDocument: {
         value: function(firstTime) {
-            // Call super method
-            if (AbstractVideo.enterDocument) {
-                AbstractVideo.enterDocument.call(this, firstTime);
-            }
+            this.super(firstTime);
             
             if (firstTime) {
                 this.setupFirstPlay();
@@ -164,10 +161,7 @@ exports.Video = AbstractVideo.specialize(/** @lends module:"ui/video.reel".Video
 
     draw: {
         value: function() {
-            // Call super method
-            if (AbstractVideo.draw) {
-                AbstractVideo.draw.call(this);
-            }
+            this.super()
 
             if (this.supportsFullScreen) {
                 if (!this.isFullScreen) {
