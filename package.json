@@ -16,6 +16,10 @@
     "overview.html",
     "overview",
     "run-tests.html",
-    "test"
+    "test",
+    "ui/video.reel/video.mov",
+    "ui/audio.reel/audio.mp3",
+    "**/**/screenshot.png",
+    "**/**/README.md"
   ]
 }
